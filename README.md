@@ -1,6 +1,6 @@
-# GymLogs
+# GymLogsBE
 
-## Backend for [GymLogs](https://github.com/veranicolas/GymLogs), my React Native App.
+## Backend for [GymLogs](https://github.com/veranicolas/GymLogsBE), my React Native App.
 
 ### Description
 
@@ -25,4 +25,4 @@ This is a simple API REST that performs CRUD operations for user data management
 
 ## Notes
 
-* If you have an idea for a pull request, please [create an issue](https://github.com/veranicolas/GymLogs/issues/new) so we can discuss it first. I don't want you to waste your time creating a feature that I don't want to add for some reason.
+* If you have an idea for a pull request, please [create an issue](https://github.com/veranicolas/GymLogsBE/issues/new) so we can discuss it first. I don't want you to waste your time creating a feature that I don't want to add for some reason.
