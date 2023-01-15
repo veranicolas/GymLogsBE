@@ -1,7 +1,0 @@
-
-Stories
-
-- As an user, I want to register or login into the app
-- an user should be able to modify their data
-- users should have their data stored
-
