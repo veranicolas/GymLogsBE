@@ -1,9 +1,11 @@
+import { Model } from 'sequelize'
 
 export const User = (sequelize:any, Sequelize:any) =>{
-    const User = sequelize.define("user",{
-        id:{
-            type:Sequelize.UUID,
-            primaryKey:true
+    const User:Model = sequelize.define("user",{
+        id: {
+            type: Sequelize.INTEGER,
+            autoIncrement: true,
+            primaryKey: true
         },
         name:{
             type:Sequelize.STRING(50)
