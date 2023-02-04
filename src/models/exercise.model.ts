@@ -15,7 +15,8 @@ type ExerciseLog = {
 export const ExerciseLog = (sequelize:any, Sequelize:any) =>{
     const ExerciseLog = sequelize.define("exercise_log",{
         id:{
-            type:Sequelize.UUID,
+            type:Sequelize.INTEGER,
+            autoIncrement: true,
             primaryKey:true
         },
         name:{
@@ -31,7 +32,7 @@ export const ExerciseLog = (sequelize:any, Sequelize:any) =>{
             type:Sequelize.STRING(10)
         },
         userId:{
-            type:Sequelize.UUID
+            type:Sequelize.STRING(50)
         }
     }) 
 
