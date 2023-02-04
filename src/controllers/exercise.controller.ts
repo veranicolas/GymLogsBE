@@ -20,5 +20,19 @@ exerciseController.create = async (req:Request, res:Response) =>{
     }
 }
 
+exerciseController.getAll = async (req:Request, res:Response) =>{
+
+    try{
+        const exercises = await Exercise.findAll({where:{userId: req.params.id}})
+
+        if(!exercises){
+            return res.status(404).send({msg:'No exercises found', exercises})
+        }
+        return res.status(200).send({msg:`Displaying ${req.params.id} exercises`, exercises})
+    } catch(error){
+        return res.status(500).send({msg:'Something went wrong', error})
+    }
+}
+
 export { exerciseController }
 
