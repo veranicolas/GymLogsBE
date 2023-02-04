@@ -1,6 +1,6 @@
 import { configDB } from "../config/db.config";
 import { Sequelize } from "sequelize";
-import { User } from "./user.model";
+import { User, UserGoogleSSO } from "./user.model";
 import { ExerciseLog } from "./exercise.model";
 
 const {DB, USER, PASSWORD, HOST, pool} = configDB
@@ -15,5 +15,6 @@ db.sequelize = sequelize
 
 db.users = User(sequelize, Sequelize)
 db.exercise = ExerciseLog(sequelize, Sequelize)
+db.users_google = UserGoogleSSO(sequelize, Sequelize)
 
 export { db }

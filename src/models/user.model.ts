@@ -1,6 +1,6 @@
 import { Model } from 'sequelize'
 
-export const User = (sequelize:any, Sequelize:any) =>{
+const User = (sequelize:any, Sequelize:any) =>{
     const User:Model = sequelize.define("user",{
         id: {
             type: Sequelize.INTEGER,
@@ -20,4 +20,17 @@ export const User = (sequelize:any, Sequelize:any) =>{
 
     return User
 } 
+
+// different model for users that used the google sso
+const UserGoogleSSO = (sequelize:any, Sequelize:any) =>{
+    const UserGoogleSSO:Model = sequelize.define("user_google",{
+        id: {
+            type: Sequelize.STRING(50),
+        }
+    }) 
+
+    return UserGoogleSSO
+} 
+
+export { User, UserGoogleSSO}
 
