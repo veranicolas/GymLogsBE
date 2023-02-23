@@ -26,7 +26,7 @@ exerciseController.getAll = async (req:Request, res:Response) =>{
     try{
         const exercises = await Exercise.findAll({where:{userId: req.params.id}})
 
-        if(!exercises){
+        if(!exercises || exercises.length == 0){
             return res.status(404).send({msg:'No exercises found', exercises})
         }
         return res.status(200).send({msg:`Displaying ${req.params.id} exercises`, exercises})
