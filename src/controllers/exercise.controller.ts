@@ -12,6 +12,7 @@ exerciseController.create = async (req:Request, res:Response) =>{
             value:req.body.value, 
             area:req.body.area, 
             unit:req.body.unit, 
+            reps:req.body.reps,
             userId:req.body.userId
         })
         return res.status(201).send({msg:'Exercise created', exercise})
