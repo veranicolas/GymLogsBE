@@ -3,11 +3,13 @@ dotenv.config()
 import express, { Express } from "express";
 import { db } from "./models";
 import { router as userRoutes } from './routes/user.routes';
+import { router as exerciseRouter } from './routes/exercise.routes'
 
 const app:Express = express()
 
 app.use(express.json())
 app.use(userRoutes)
+app.use(exerciseRouter)
 
 db.sequelize.sync({force: true})
     .then(()=>{

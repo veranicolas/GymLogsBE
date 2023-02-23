@@ -22,15 +22,6 @@ const User = (sequelize:any, Sequelize:any) =>{
 } 
 
 // different model for users that used the google sso
-const UserGoogleSSO = (sequelize:any, Sequelize:any) =>{
-    const UserGoogleSSO:Model = sequelize.define("user_google",{
-        id: {
-            type: Sequelize.STRING(50),
-        }
-    }) 
 
-    return UserGoogleSSO
-} 
-
-export { User, UserGoogleSSO}
+export { User }
 
