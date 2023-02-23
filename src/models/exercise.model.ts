@@ -25,11 +25,15 @@ export const ExerciseLog = (sequelize:any, Sequelize:any) =>{
         value:{
             type:Sequelize.INTEGER
         },
+        reps:{
+            type:Sequelize.INTEGER
+        },
         area:{
             type:Sequelize.STRING(10)
         },
         unit:{
-            type:Sequelize.STRING(10)
+            type:Sequelize.STRING(10),
+            defaultValue:"kg"
         },
         userId:{
             type:Sequelize.STRING(50)
