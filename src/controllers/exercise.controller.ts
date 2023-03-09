@@ -1,8 +1,7 @@
 import { Request, Response } from "express"
-import { db } from "../models"
+import { Exercise } from "../models/mongoose/exercise.model"
 
 const exerciseController:any = {}
-const Exercise = db.exercise
 
 exerciseController.create = async (req:Request, res:Response) =>{
 
@@ -24,7 +23,7 @@ exerciseController.create = async (req:Request, res:Response) =>{
 exerciseController.getAll = async (req:Request, res:Response) =>{
 
     try{
-        const exercises = await Exercise.findAll({where:{userId: req.params.id}})
+        const exercises = await Exercise.find({userId: req.params.id})
 
         if(!exercises || exercises.length == 0){
             return res.status(404).send({msg:'No exercises found', exercises})
