@@ -8,6 +8,7 @@ type ExerciseLog = {
     name:string,
     area: typeOfExercise,
     value: number,
+    reps: number,
     unit: unit,
     date_created: string,
     userId: string
@@ -27,6 +28,10 @@ const exerciseSchema = new Schema<ExerciseLog>(
             type: Number,
             required: true,
             default:0
+        },
+        reps:{
+            type: Number,
+            required:true
         },
         unit:{
             type: String,
