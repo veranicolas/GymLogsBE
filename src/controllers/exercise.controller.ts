@@ -14,6 +14,7 @@ exerciseController.create = async (req:Request, res:Response) =>{
             reps:req.body.reps,
             userId:req.body.userId
         })
+
         return res.status(201).send({msg:'Exercise created', exercise})
     } catch(error:any){
         return res.status(500).send({msg:'Server error', error})

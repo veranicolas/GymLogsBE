@@ -1,7 +1,7 @@
-import { configDB } from "../config/db.config";
+import { configDB } from "../../config/db.config";
 import { Sequelize } from "sequelize";
-import { User } from "./pg/user.model";
-import { ExerciseLog } from "./pg/exercise.model";
+import { User } from "./user.model";
+import { ExerciseLog } from "./exercise.model";
 
 const {DB, USER, PASSWORD, HOST, pool} = configDB
 

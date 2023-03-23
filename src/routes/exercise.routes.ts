@@ -3,8 +3,9 @@ import { exerciseController } from '../controllers/exercise.controller'
 const router = Router()
 
 // create exercise log
-router.post('/exercise', exerciseController.create)
 
 router.get('/exercise/:id', exerciseController.getAll)
+
+router.post('/exercise', exerciseController.create)
 
 export { router }
