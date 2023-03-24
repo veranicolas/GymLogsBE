@@ -9,7 +9,7 @@ import { connectionDB } from './config/db-mongodb.config';
 const app:Express = express()
 
 app.use(express.json())
-//app.use(userRoutes)
+app.use(userRoutes)
 app.use(exerciseRouter)
 // app.use(cors({
 //     origin:'*'
